@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../assets/images/itsolera.svg";
+import logo from "../assets/images/Itsolera.svg";
 
 const Loader = () => {
   return (
