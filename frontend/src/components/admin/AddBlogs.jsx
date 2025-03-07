@@ -28,7 +28,7 @@ const AddBlog = () => {
 
   const fetchBlogs = async () => {
     try {
-      const response = await axios.get("http://62.72.57.47:8080/api/blogs");
+      const response = await axios.get("http://localhist:8080/api/blogs");
       setBlogs(response.data);
     } catch (error) {
       setError("Failed to fetch blogs");
@@ -60,12 +60,9 @@ const AddBlog = () => {
 
     try {
       if (editBlogId) {
-        await axios.put(
-          `http://62.72.57.47:8080/api/blogs/${editBlogId}`,
-          data
-        );
+        await axios.put(`http://localhist:8080/api/blogs/${editBlogId}`, data);
       } else {
-        await axios.post("http://62.72.57.47:8080/api/blogs", data);
+        await axios.post("http://localhist:8080/api/blogs", data);
       }
 
       setFormData({ title: "", description: "", category: "", image: null });
@@ -90,7 +87,7 @@ const AddBlog = () => {
     }).then(async (result) => {
       if (result.isConfirmed) {
         try {
-          await axios.delete(`http://62.72.57.47:8080/api/blogs/${id}`);
+          await axios.delete(`http://localhist:8080/api/blogs/${id}`);
           fetchBlogs();
           Swal.fire("Deleted!", "Your blog has been deleted.", "success");
         } catch (error) {
@@ -174,7 +171,7 @@ const AddBlog = () => {
               />
               {existingImage && (
                 <img
-                  src={`http://62.72.57.47:8080/${existingImage}`}
+                  src={`http://localhist:8080/${existingImage}`}
                   alt="Current"
                   className="w-24 h-24 rounded-lg object-cover border border-cDarkBlue shadow-md"
                 />
@@ -201,7 +198,7 @@ const AddBlog = () => {
             {/* Blog Image */}
             {blog.image && (
               <img
-                src={`http://62.72.57.47:8080${blog.image}`}
+                src={`http://localhist:8080${blog.image}`}
                 alt={blog.title}
                 className="w-full h-56 object-cover p-4"
               />

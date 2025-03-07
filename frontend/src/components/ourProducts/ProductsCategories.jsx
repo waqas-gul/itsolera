@@ -30,7 +30,7 @@ const ProductsCategories = () => {
   const fetchProducts = async () => {
     setLoading(true);
     try {
-      const response = await axios.get("http://62.72.57.47:8080/api/products");
+      const response = await axios.get("http://localhist:8080/api/products");
       setProducts(response.data);
     } catch (err) {
       Swal.fire({
@@ -126,7 +126,7 @@ const ProductsCategories = () => {
                     {/* Left Side - Text Content */}
                     <div className="lg:w-[320px] md:w-1/3 lg:h-80 md:h-auto">
                       <img
-                        src={`http://62.72.57.47:8080/${product.image}`}
+                        src={`http://localhist:8080/${product.image}`}
                         alt={""}
                         className="w-full h-full object-cover"
                       />

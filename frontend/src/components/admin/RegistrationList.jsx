@@ -20,7 +20,7 @@ const RegistrationList = () => {
   const fetchRegistrations = async () => {
     try {
       const response = await axios.get(
-        "http://62.72.57.47:8080/api/registrations"
+        "http://localhist:8080/api/registrations"
       );
       setRegistrations(Array.isArray(response.data) ? response.data : []);
     } catch (error) {
@@ -42,7 +42,7 @@ const RegistrationList = () => {
 
     if (result.isConfirmed) {
       try {
-        await axios.delete(`http://62.72.57.47:8080/api/registrations/${id}`);
+        await axios.delete(`http://localhist:8080/api/registrations/${id}`);
         fetchRegistrations();
         Swal.fire({
           title: "Deleted!",
