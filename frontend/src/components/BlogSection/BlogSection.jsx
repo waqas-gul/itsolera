@@ -23,7 +23,7 @@ const BlogSection = () => {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const response = await axios.get("http://localhist:8080/api/blogs"); // Replace with your actual API
+        const response = await axios.get("http://62.72.57.47:8080/api/blogs"); // Replace with your actual API
         setBlogs(response.data); // Set blog data
       } catch (error) {
         console.error("Error fetching blogs:", error);
@@ -109,7 +109,7 @@ const BlogSection = () => {
                 >
                   {/* Image with opacity change on small devices */}
                   <img
-                    src={`http://localhist:8080${blog.image}`}
+                    src={`http://62.72.57.47:8080${blog.image}`}
                     alt={blog.title}
                     className="w-full h-48 object-cover opacity-100 sm:opacity-80 md:opacity-100"
                   />

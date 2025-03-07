@@ -1,7 +1,7 @@
 import { useState } from "react";
 import MenuItems from "./MenuItems";
 import { Link } from "react-router-dom";
-import itsoler from "../../assets/images/itsolera.svg";
+import itsoler from "../../assets/images/Itsolera.svg";
 const menuItems = [
   {
     title: "HOME",

@@ -17,7 +17,7 @@ const EditProduct = () => {
     const fetchProduct = async () => {
       try {
         const response = await axios.get(
-          `http://localhist:8080/api/products/${id}`
+          `http://62.72.57.47:8080/api/products/${id}`
         );
         const product = response.data;
         setFormData({
@@ -25,7 +25,7 @@ const EditProduct = () => {
           name: product.name,
           image: null,
         });
-        setPreviewImage(`http://localhist:8080/${product.image}`);
+        setPreviewImage(`http://62.72.57.47:8080/${product.image}`);
       } catch (err) {
         Swal.fire({
           title: "Error!",
@@ -59,7 +59,7 @@ const EditProduct = () => {
     }
 
     try {
-      await axios.put(`http://localhist:8080/api/products/${id}`, data, {
+      await axios.put(`http://62.72.57.47:8080/api/products/${id}`, data, {
         headers: { "Content-Type": "multipart/form-data" },
       });
 
