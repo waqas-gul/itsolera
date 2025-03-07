@@ -34,7 +34,7 @@ function RegistrationForm() {
     try {
       // Send POST request to backend
       const response = await axios.post(
-        "http://localhost:5000/api/registrations",
+        "http://62.72.57.47:8080/api/registrations",
         formData
       );
 

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 
-const API_URL = "http://localhost:5000/api/events"; // Adjust based on your backend
+const API_URL = "http://62.72.57.47:8080/api/events"; // Adjust based on your backend
 
 const UpdateEvent = () => {
   const { id } = useParams(); // Get event ID from URL

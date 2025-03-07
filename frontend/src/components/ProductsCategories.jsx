@@ -11,7 +11,7 @@ const ProductsCategories = () => {
 
   // Fetch all products
   const fetchProducts = async () => {
-    const response = await axios.get("http://localhost:5000/api/products");
+    const response = await axios.get("http://62.72.57.47:8080/api/products");
     setProducts(response.data);
   };
 
@@ -104,7 +104,7 @@ const ProductsCategories = () => {
               >
                 <div className="h-40 bg-gray-100 rounded mb-4 flex items-center justify-center overflow-hidden">
                   <img
-                    src={`http://localhost:5000/${product.image}`}
+                    src={`http://62.72.57.47:8080/${product.image}`}
                     alt={product.name}
                     className="w-full h-full object-cover"
                   />

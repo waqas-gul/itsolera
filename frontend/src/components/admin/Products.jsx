@@ -29,7 +29,7 @@ const Products = () => {
   const fetchProducts = async () => {
     try {
       const token = localStorage.getItem("token");
-      const response = await axios.get("http://localhost:5000/api/products", {
+      const response = await axios.get("http://62.72.57.47:8080/api/products", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setProducts(response.data);
@@ -72,8 +72,8 @@ const Products = () => {
     }
 
     const url = editProductId
-      ? `http://localhost:5000/api/products/${editProductId}`
-      : "http://localhost:5000/api/products";
+      ? `http://62.72.57.47:8080/api/products/${editProductId}`
+      : "http://62.72.57.47:8080/api/products";
     const method = editProductId ? "put" : "post";
 
     try {
@@ -144,7 +144,7 @@ const Products = () => {
     if (result.isConfirmed) {
       try {
         const token = localStorage.getItem("token");
-        await axios.delete(`http://localhost:5000/api/products/${id}`, {
+        await axios.delete(`http://62.72.57.47:8080/api/products/${id}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         fetchProducts();
@@ -251,7 +251,7 @@ const Products = () => {
           >
             <div className="h-40 w-full rounded mb-4 flex items-center justify-center overflow-hidden">
               <img
-                src={`http://localhost:5000/${product.image}`}
+                src={`http://62.72.57.47:8080/${product.image}`}
                 alt={product.name}
                 className="w-full h-full object-cover"
               />

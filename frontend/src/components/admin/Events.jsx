@@ -6,7 +6,7 @@ import Swal from "sweetalert2";
 import { CiLocationOn } from "react-icons/ci";
 import { SlCalender } from "react-icons/sl";
 
-const API_URL = "http://localhost:5000/api/events";
+const API_URL = "http://62.72.57.47:8080/api/events";
 
 const Events = () => {
   const navigate = useNavigate();
@@ -352,19 +352,19 @@ const Events = () => {
                 {/* Image with Nested Grid 1 */}
                 <div className="flex flex-col items-center space-y-4">
                   <img
-                    src={`http://localhost:5000/${event.images[0]}`}
+                    src={`http://62.72.57.47:8080/${event.images[0]}`}
                     alt="Main Workshop"
                     className="w-full h-auto max-w-md object-cover rounded-lg shadow-md"
                   />
 
                   <div className="grid grid-cols-2 gap-2 w-full max-w-md">
                     <img
-                      src={`http://localhost:5000/${event.images[1]}`}
+                      src={`http://62.72.57.47:8080/${event.images[1]}`}
                       alt="Workshop Image 1"
                       className="w-full h-full object-cover rounded-lg shadow-md"
                     />
                     <img
-                      src={`http://localhost:5000/${event.images[2]}`}
+                      src={`http://62.72.57.47:8080/${event.images[2]}`}
                       alt="Workshop Image 2"
                       className="w-full h-full object-cover rounded-lg shadow-md"
                     />
@@ -374,7 +374,7 @@ const Events = () => {
                 {/* Image with Nested Grid 2 */}
                 <div className="flex flex-col items-center space-y-4">
                   <img
-                    src={`http://localhost:5000/${event.images[3]}`}
+                    src={`http://62.72.57.47:8080/${event.images[3]}`}
                     alt="Workshop Image 3"
                     className="w-full h-auto max-w-md object-cover rounded-lg shadow-md"
                   />
@@ -383,18 +383,18 @@ const Events = () => {
                 {/* Image with Nested Grid 3 */}
                 <div className="flex flex-col items-center space-y-4">
                   <img
-                    src={`http://localhost:5000/${event.images[4]}`}
+                    src={`http://62.72.57.47:8080/${event.images[4]}`}
                     alt="Main Workshop"
                     className="w-full h-auto max-w-md object-cover rounded-lg shadow-md"
                   />
                   <div className="grid grid-cols-2 gap-2 w-full max-w-md">
                     <img
-                      src={`http://localhost:5000/${event.images[5]}`}
+                      src={`http://62.72.57.47:8080/${event.images[5]}`}
                       alt="Workshop Image 1"
                       className="w-full h-full object-cover rounded-lg shadow-md"
                     />
                     <img
-                      src={`http://localhost:5000/${event.images[6]}`}
+                      src={`http://62.72.57.47:8080/${event.images[6]}`}
                       alt="Workshop Image 2"
                       className="w-full h-full object-cover rounded-lg shadow-md"
                     />

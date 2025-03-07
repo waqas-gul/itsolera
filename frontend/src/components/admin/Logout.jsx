@@ -17,7 +17,7 @@ const Logout = () => {
     if (result.isConfirmed) {
       try {
         // Call logout API
-        await fetch("http://localhost:5000/api/logout", {
+        await fetch("http://62.72.57.47:8080/api/logout", {
           method: "POST",
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,

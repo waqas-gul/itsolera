@@ -20,7 +20,7 @@ const VerifyUser = () => {
 
     try {
       const response = await axios.get(
-        `http://localhost:5000/api/upload/verify?referenceNo=${referenceNo}`
+        `http://62.72.57.47:8080/api/upload/verify?referenceNo=${referenceNo}`
       );
 
       setLoading(false);
