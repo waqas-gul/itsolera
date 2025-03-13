@@ -13,7 +13,6 @@ const uploadRoutes = require("./routes/uploadRoutes");
 dotenv.config();
 const PORT = process.env.PORT || 5000;
 
-
 const app = express();
 
 const productRoutes = require('./routes/productRoutes');
@@ -21,33 +20,33 @@ const path = require('path');
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
 // Middleware
-app.use(cors()); // If API is used from frontend
-app.use(express.json()); // Parse JSON request body
-app.use(express.urlencoded({ extended: true })); // Parse URL-encoded form data
+app.use(cors());
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-
-
-
-
 
 // Database connection
 connectDB();
 
-//auth Routes
+// Root route
+app.get('/', (req, res) => {
+    res.send('Welcome to the API!');
+});
+
+// Auth Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/products', productRoutes);
 
-
-//events Routes
+// Events Routes
 app.use("/api/events", eventRoutes);
 
-
-// Routes
+// Blog Routes
 app.use("/api/blogs", blogRoutes);
 
+// Upload Routes
 app.use("/api/upload", uploadRoutes);
 
-// Routes
+// Registration Routes
 app.use('/api/registrations', registrationsRouter);
 
 // Error handling middleware
@@ -57,7 +56,6 @@ app.use((err, req, res, next) => {
 });
 
 // Start server
-
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
