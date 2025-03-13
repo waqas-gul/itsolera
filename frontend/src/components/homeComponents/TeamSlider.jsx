@@ -62,7 +62,8 @@ const TeamSlider = () => {
       image: zuhiab,
       linkedin: "https://www.linkedin.com/in/zuhaib-khan-183840275",
       facebook: "/",
-      instagram: "/",
+      instagram:
+        "https://www.instagram.com/zuhaibkhan662?igsh=ODdzdjlwOXEyY2o2",
     },
     {
       name: "Fawad Azam",
@@ -72,7 +73,8 @@ const TeamSlider = () => {
       image: fawad,
       linkedin:
         "https://www.linkedin.com/in/fawad-azam-126705253?utm_source=share&utm_campaign=share_via&utm_content=pofile",
-      facebook: "",
+      facebook:
+        "https://www.facebook.com/profile.php?id=100039326873314&mibextid=ZbWKwL",
       instagram: "https://www.instagram.com/f_fawad_zm?igsh=a3R3aW5jNDRzcXEx",
     },
     {
@@ -143,7 +145,7 @@ const TeamSlider = () => {
       description:
         "She is AI Engineer at ITSOLERA, He assist in leveraging AI and deep learning to develop real-world solutions. With a foundation in Computer Science  and generative AI, she contribute to projects that enhance our technological capabilities.",
       image: kainat,
-      linkedin: "/",
+      linkedin: "https://pk.linkedin.com/in/kainat-kainat-918641257",
       facebook: "/",
       instagram: "/",
     },
