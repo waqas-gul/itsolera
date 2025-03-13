@@ -3,7 +3,7 @@ import axios from "axios";
 import { FaPlus, FaMinus } from "react-icons/fa";
 import Swal from "sweetalert2";
 import { Navigate } from "react-router-dom"; // For navigation
-
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 const RegistrationList = () => {
   const [registrations, setRegistrations] = useState([]);
   const [openDepartment, setOpenDepartment] = useState(null);
@@ -19,9 +19,7 @@ const RegistrationList = () => {
 
   const fetchRegistrations = async () => {
     try {
-      const response = await axios.get(
-        "http://62.72.57.47:8080/api/registrations"
-      );
+      const response = await axios.get(`${BACKEND_URL}/api/registrations`);
       setRegistrations(Array.isArray(response.data) ? response.data : []);
     } catch (error) {
       console.error("Error fetching registrations:", error);
@@ -42,7 +40,7 @@ const RegistrationList = () => {
 
     if (result.isConfirmed) {
       try {
-        await axios.delete(`http://62.72.57.47:8080/api/registrations/${id}`);
+        await axios.delete(`${BACKEND_URL}/api/registrations/${id}`);
         fetchRegistrations();
         Swal.fire({
           title: "Deleted!",

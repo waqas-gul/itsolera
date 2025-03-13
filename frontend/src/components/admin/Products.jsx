@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import Swal from "sweetalert2";
-
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 const Products = () => {
   const navigate = useNavigate();
   const [products, setProducts] = useState([]);
@@ -29,7 +29,7 @@ const Products = () => {
   const fetchProducts = async () => {
     try {
       const token = localStorage.getItem("token");
-      const response = await axios.get("http://62.72.57.47:8080/api/products", {
+      const response = await axios.get(`${BACKEND_URL}/api/products`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setProducts(response.data);
@@ -72,8 +72,8 @@ const Products = () => {
     }
 
     const url = editProductId
-      ? `http://62.72.57.47:8080/api/products/${editProductId}`
-      : "http://62.72.57.47:8080/api/products";
+      ? `${BACKEND_URL}/api/products/${editProductId}`
+      : `${BACKEND_URL}/api/products`;
     const method = editProductId ? "put" : "post";
 
     try {
@@ -144,7 +144,7 @@ const Products = () => {
     if (result.isConfirmed) {
       try {
         const token = localStorage.getItem("token");
-        await axios.delete(`http://62.72.57.47:8080/api/products/${id}`, {
+        await axios.delete(`${BACKEND_URL}/api/products/${id}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         fetchProducts();
@@ -251,7 +251,7 @@ const Products = () => {
           >
             <div className="h-40 w-full rounded mb-4 flex items-center justify-center overflow-hidden">
               <img
-                src={`http://62.72.57.47:8080/${product.image}`}
+                src={`${BACKEND_URL}/${product.image}`}
                 alt={product.name}
                 className="w-full h-full object-cover"
               />

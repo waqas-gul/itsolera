@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
-
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 const EditProduct = () => {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -16,16 +16,14 @@ const EditProduct = () => {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const response = await axios.get(
-          `http://62.72.57.47:8080/api/products/${id}`
-        );
+        const response = await axios.get(`${BACKEND_URL}/api/products/${id}`);
         const product = response.data;
         setFormData({
           category: product.category,
           name: product.name,
           image: null,
         });
-        setPreviewImage(`http://62.72.57.47:8080/${product.image}`);
+        setPreviewImage(`${BACKEND_URL}/${product.image}`);
       } catch (err) {
         Swal.fire({
           title: "Error!",
@@ -59,7 +57,7 @@ const EditProduct = () => {
     }
 
     try {
-      await axios.put(`http://62.72.57.47:8080/api/products/${id}`, data, {
+      await axios.put(`${BACKEND_URL}/api/products/${id}`, data, {
         headers: { "Content-Type": "multipart/form-data" },
       });
 

@@ -1,5 +1,5 @@
 import React from "react";
-import { PiStudentFill } from "react-icons/pi";
+
 
 function CourseBanner() {
   return (

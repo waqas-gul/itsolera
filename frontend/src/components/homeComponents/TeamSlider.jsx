@@ -60,30 +60,30 @@ const TeamSlider = () => {
       description:
         "As a Data Scientist at ITSOLERA, He specialize in analyzing complex datasets and developing data-driven solutions. With expertise in machine learning, statistical modeling, and data visualization, he uncover insights and build predictive models to drive business growth and support strategic decision-making.",
       image: zuhiab,
-      linkedin: "/",
+      linkedin: "https://www.linkedin.com/in/zuhaib-khan-183840275",
       facebook: "/",
       instagram: "/",
     },
     {
       name: "Fawad Azam",
-      role: "AI Enginerr",
+      role: "AI Engineer",
       description:
         "As a AI Engineer at ITSOLERA, He assist in leveraging AI and deep learning to develop real-world solutions. With a foundation in software engineering and generative AI, he contribute to projects that enhance our technological capabilities.",
       image: fawad,
-      linkedin: "/",
-      facebook: "",
-      instagram:
+      linkedin:
         "https://www.linkedin.com/in/fawad-azam-126705253?utm_source=share&utm_campaign=share_via&utm_content=pofile",
+      facebook: "",
+      instagram: "https://www.instagram.com/f_fawad_zm?igsh=a3R3aW5jNDRzcXEx",
     },
     {
       name: "Muhammad Adnan ",
-      role: "Full Stack Develpoer",
+      role: "Full Stack Developer",
       description:
         "As a Full Stack Developer at ITSOLERA, He work on developing dynamic web applications using both front-end and back-end technologies. With a strong foundation in both client-side and server-side development, he contribute to building robust, scalable solutions that enhance our technological capabilities.",
       image: adnan,
-      linkedin: "/",
-      facebook: "/",
-      instagram: "/",
+      linkedin: "https://www.linkedin.com/in/muhammad-adnan-khan-081ab9258",
+      facebook: "https://www.facebook.com/share/1BXmpSspbD/",
+      instagram: "https://www.instagram.com/itx_malak10?igsh=b2FvdnQwdW9zd2kw",
     },
     {
       name: "Muhammad Ahsan Ayaz",
@@ -139,7 +139,7 @@ const TeamSlider = () => {
     },
     {
       name: "Kainat Afzal",
-      role: "AI Enginerr",
+      role: "AI Engineer",
       description:
         "She is AI Engineer at ITSOLERA, He assist in leveraging AI and deep learning to develop real-world solutions. With a foundation in Computer Science  and generative AI, she contribute to projects that enhance our technological capabilities.",
       image: kainat,
@@ -151,7 +151,7 @@ const TeamSlider = () => {
       name: "Waqas Gul",
       role: "MERN Stack developer",
       description:
-        "As a Senior MERN Stack Developer at ITSOLERA, He specialize in building dynamic, scalable web applications using MongoDB, Express.js, React.js, and Node.js. With a focus on creating seamless user interfaces and robust back-end systems, He lead end-to-end development and mentor team members to deliver impactful, high-performing solutions that drive business growth.",
+        "As a Senior MERN Stack Developer at ITSOLERA, he builds dynamic web applications with MongoDB, Express.js, React.js, and Node.js. He specializes in seamless UIs, robust backends, and mentoring teams to deliver high-performance solutions that drive business growth.",
       image: waqas,
       linkedin: "https://www.linkedin.com/in/waqas-gul-b7580826b/",
       facebook: "https://www.facebook.com/WAQASI.369",
@@ -164,7 +164,7 @@ const TeamSlider = () => {
       name: "Dr. Hafeez UR Rehman ",
       role: "Founder & CEO",
       description:
-        "Dr. Hafeez ur Rehman, with a PhD in Electrical Engineering, is the CEO of ITSOLERA PVT LTD and an expert in AI, IoT, and cybersecurity. With over 13 years of experience, he has developed advanced solutions that integrate AI, IoT, and cybersecurity to enhance threat detection, automate security systems, and protect digital infrastructures. His work includes applying machine learning and IoT technologies to strengthen Pakistan’s technological and security landscape. Dr. Hafeez is also a published researcher, contributing to both academic knowledge and practical applications in these .",
+        "Dr. Hafeez ur Rehman, CEO of ITSOLERA PVT LTD, holds a PhD in Electrical Engineering and specializes in AI, IoT, and cybersecurity. With 13+ years of experience, he has developed advanced solutions for threat detection, automated security, and digital protection. His work strengthens Pakistan’s tech and security landscape, and as a published researcher, he bridges academic knowledge with real-world applications.",
       image: hafeezurehman,
       linkedin: "https://www.linkedin.com/in/dr-hafeez-ur-rehman-633a43135/",
       facebook: "/",
@@ -174,7 +174,7 @@ const TeamSlider = () => {
       name: "Masooma Ali ",
       role: "Director Cyber Security",
       description:
-        "Masooma Ali serves as the Director of ITSOLERA, leading the Cybersecurity Department. With a Bachelor's degree in Computer Science and a specialization in cybersecurity, her expertise includes internationally recognized certifications such as Certified Ethical Hacker (CEH), CEH Practical Master from EC-Council, and CompTIA Security+. Bringing over 5 years of experience in the cybersecurity industry, Masooma has played a pivotal role in leading projects and instructing multiple NAVTTC and TEVTA Punjab cybersecurity batches, contributing to the development of skilled cybersecurity professionals.",
+        "Masooma Ali is the Director of ITSOLERA and leads the Cybersecurity Department. With a Bachelor's in Computer Science and certifications like CEH, CEH Practical Master, and CompTIA Security+, she brings over 5 years of experience. She has led key projects and trained NAVTTC and TEVTA Punjab cybersecurity batches, shaping future cybersecurity professionals.",
       image: masooma,
       linkedin: "https://www.linkedin.com/in/masooma-ali-94243b240/",
       facebook: "/",

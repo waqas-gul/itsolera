@@ -5,12 +5,13 @@ const AboutUs = () => {
   return (
     <div className="relative h-screen overflow-y-auto font-inter">
       {/* Header Image Section */}
-      <div className="relative h-screen w-full">
+      <div className="relative h-screen w-full ">
         <img
           src={Rectangle}
           alt="Teamwork"
-          className="w-full h-full object-cover"
+          className="w-[100vw] h-full object-cover"
         />
+
         <h1 className="absolute top-1/3 left-6 sm:left-12 md:left-56 text-2xl sm:text-4xl md:text-6xl font-bold text-cWhite">
           ABOUT US
         </h1>

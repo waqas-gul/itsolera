@@ -6,6 +6,8 @@ import { NavLink } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import Loader from "../Loader";
 
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
+
 const EventComponent = () => {
   const [events, setEvents] = useState([]);
   const [activeFilter, setActiveFilter] = useState("All");
@@ -26,7 +28,7 @@ const EventComponent = () => {
     const fetchEvents = async () => {
       try {
         setIsLoading(true);
-        const response = await axios.get("http://62.72.57.47:8080/api/events");
+        const response = await axios.get(`${BACKEND_URL}/api/events`);
         setEvents(
           Array.isArray(response.data.events) ? response.data.events : []
         );
@@ -132,7 +134,7 @@ const EventComponent = () => {
                     {/* Image */}
                     <div className="w-full md:w-1/3 h-40 md:h-auto">
                       <img
-                        src={`http://62.72.57.47:8080/${event.images[7]}`} // Use the first image
+                        src={`${BACKEND_URL}/${event.images[7]}`} // Use the first image
                         alt={event.title}
                         className="w-full h-full object-cover"
                       />

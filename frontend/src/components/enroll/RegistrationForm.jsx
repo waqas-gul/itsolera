@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import Itsolera from "../../assets/images/Itsolera.svg";
 import axios from "axios";
 import Swal from "sweetalert2";
-
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 function RegistrationForm() {
   // Create refs for all form fields
   const firstNameRef = useRef();
@@ -34,7 +34,7 @@ function RegistrationForm() {
     try {
       // Send POST request to backend
       const response = await axios.post(
-        "http://62.72.57.47:8080/api/registrations",
+        `${BACKEND_URL}/api/registrations`,
         formData
       );
 

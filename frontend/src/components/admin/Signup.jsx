@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
-
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 const Signup = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -27,7 +27,7 @@ const Signup = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://62.72.57.47:8080/api/auth/signup", {
+      const response = await fetch(`${BACKEND_URL}/api/auth/signup`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -47,9 +47,7 @@ const Signup = () => {
           showConfirmButton: false,
         });
 
-        setTimeout(() => {
-          navigate("/dashboard"); // Redirect to admin dashboard
-        }, 2000);
+        setTimeout(() => {}, 2000);
       } else {
         Swal.fire({
           icon: "error",
@@ -68,7 +66,7 @@ const Signup = () => {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-cDarkBlue to-CPurple text-cWhite px-4 font-inter">
+    <div className="flex items-center justify-center  min-h-screen bg-gradient-to-r from-cDarkBlue to-CPurple text-cWhite px-4 font-inter">
       <div className="bg-cWhite bg-opacity-10 backdrop-blur-lg p-8 rounded-xl shadow-lg w-full max-w-md">
         <h2 className="text-4xl font-bold text-center mb-8">
           Create Admin Account
@@ -118,19 +116,10 @@ const Signup = () => {
               type="submit"
               className="w-full bg-gradient-to-r from-cDarkBlue to-CPurple text-cWhite font-semibold text-lg py-2 px-6 rounded-xl shadow-lg hover:opacity-90 transition-all duration-300"
             >
-              Signup
+              Add User
             </button>
           </div>
         </form>
-
-        <div className="mt-4 text-center">
-          <p className="text-gray-600">
-            Already have an account?{" "}
-            <a href="/login" className="text-[#3b82f6] font-semibold">
-              Login here
-            </a>
-          </p>
-        </div>
       </div>
     </div>
   );

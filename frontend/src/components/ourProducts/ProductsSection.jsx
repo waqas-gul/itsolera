@@ -9,7 +9,7 @@ const ProductsSection = () => {
         <img
           src={product}
           alt="Our Products"
-          className=" inset-0 w-full h-full object-cover"
+          className=" inset-0 w-[100vw] h-full object-cover"
         />
       </div>
 

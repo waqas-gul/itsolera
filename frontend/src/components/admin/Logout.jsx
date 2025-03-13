@@ -1,6 +1,6 @@
 import React from "react";
 import Swal from "sweetalert2";
-
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 const Logout = () => {
   const handleLogout = async () => {
     // Confirm before logging out
@@ -17,7 +17,7 @@ const Logout = () => {
     if (result.isConfirmed) {
       try {
         // Call logout API
-        await fetch("http://62.72.57.47:8080/api/logout", {
+        await fetch(`${BACKEND_URL}/api/logout`, {
           method: "POST",
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,

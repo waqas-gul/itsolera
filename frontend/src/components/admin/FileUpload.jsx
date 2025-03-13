@@ -3,7 +3,7 @@ import axios from "axios";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 import "react-toastify/dist/ReactToastify.css";
-
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 import Loader from "../Loader";
 
 const FileUpload = () => {
@@ -28,7 +28,7 @@ const FileUpload = () => {
   const fetchData = async () => {
     setLoading(true);
     try {
-      const response = await axios.get("http://62.72.57.47:8080/api/upload");
+      const response = await axios.get(`${BACKEND_URL}/api/upload`);
       setData(response.data);
     } catch (err) {
       toast.error("Failed to fetch data");
@@ -49,7 +49,7 @@ const FileUpload = () => {
     formData.append("file", file);
 
     try {
-      await axios.post("http://62.72.57.47:8080/api/upload", formData);
+      await axios.post(`${BACKEND_URL}/api/upload`, formData);
       toast.success("File uploaded successfully!");
       fetchData();
     } catch (err) {
@@ -59,7 +59,7 @@ const FileUpload = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://62.72.57.47:8080/api/upload/${id}`);
+      await axios.delete(`${BACKEND_URL}/api/upload/${id}`);
       toast.success("Data deleted successfully");
       fetchData();
     } catch (err) {

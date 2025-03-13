@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
+
 const ProductsCategories = () => {
   const [products, setProducts] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState(
@@ -11,7 +13,7 @@ const ProductsCategories = () => {
 
   // Fetch all products
   const fetchProducts = async () => {
-    const response = await axios.get("http://62.72.57.47:8080/api/products");
+    const response = await axios.get(`${BACKEND_URL}/api/products`);
     setProducts(response.data);
   };
 
@@ -104,7 +106,7 @@ const ProductsCategories = () => {
               >
                 <div className="h-40 bg-gray-100 rounded mb-4 flex items-center justify-center overflow-hidden">
                   <img
-                    src={`http://62.72.57.47:8080/${product.image}`}
+                    src={`${BACKEND_URL}/${product.image}`}
                     alt={product.name}
                     className="w-full h-full object-cover"
                   />

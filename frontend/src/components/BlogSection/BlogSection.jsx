@@ -3,7 +3,7 @@ import axios from "axios";
 import { motion } from "framer-motion";
 import blogsection from "../../assets/images/blogs/blogSection.jpg";
 import Loader from "../Loader";
-
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 const BlogSection = () => {
   const [blogs, setBlogs] = useState([]); // Store fetched blogs
   const [loading, setLoading] = useState(true); // Loading state
@@ -23,7 +23,7 @@ const BlogSection = () => {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const response = await axios.get("http://62.72.57.47:8080/api/blogs"); // Replace with your actual API
+        const response = await axios.get(`${BACKEND_URL}/api/blogs`); // Replace with your actual API
         setBlogs(response.data); // Set blog data
       } catch (error) {
         console.error("Error fetching blogs:", error);
@@ -109,7 +109,7 @@ const BlogSection = () => {
                 >
                   {/* Image with opacity change on small devices */}
                   <img
-                    src={`http://62.72.57.47:8080${blog.image}`}
+                    src={`${BACKEND_URL}/${blog.image}`}
                     alt={blog.title}
                     className="w-full h-48 object-cover opacity-100 sm:opacity-80 md:opacity-100"
                   />

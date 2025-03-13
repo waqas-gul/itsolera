@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Swal from "sweetalert2";
-
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 const VerifyUser = () => {
   const [referenceNo, setReferenceNo] = useState("");
   const [loading, setLoading] = useState(false);
@@ -20,7 +20,7 @@ const VerifyUser = () => {
 
     try {
       const response = await axios.get(
-        `http://62.72.57.47:8080/api/upload/verify?referenceNo=${referenceNo}`
+        `${BACKEND_URL}/api/upload/verify?referenceNo=${referenceNo}`
       );
 
       setLoading(false);

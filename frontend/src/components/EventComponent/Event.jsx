@@ -1,13 +1,12 @@
 import React from "react";
-
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-
 import { SlCalender } from "react-icons/sl";
 import { CiLocationOn } from "react-icons/ci";
-
 import AboutEventsImage from "../../assets/images/AboutNewsImage/AboutEvents.svg";
+
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 
 const Event = () => {
   const { id } = useParams(); // Get event ID from the URL
@@ -17,7 +16,7 @@ const Event = () => {
 
   useEffect(() => {
     axios
-      .get(`http://62.72.57.47:8080/api/events/${id}`)
+      .get(`${BACKEND_URL}/api/events/${id}`)
       .then((response) => {
         setEvent(response.data);
         setLoading(false);
@@ -99,18 +98,18 @@ const Event = () => {
             {/* Image with Nested Grid 1 */}
             <div className="flex flex-col items-center space-y-4">
               <img
-                src={`http://62.72.57.47:8080/${event.images[0]}`}
+                src={`${BACKEND_URL}/${event.images[0]}`}
                 alt="Main Workshop"
                 className="w-full h-auto max-w-md object-cover rounded-lg shadow-md"
               />
               <div className="grid grid-cols-2 gap-2 w-full max-w-md">
                 <img
-                  src={`http://62.72.57.47:8080/${event.images[1]}`}
+                  src={`${BACKEND_URL}/${event.images[1]}`}
                   alt="Workshop Image 1"
                   className="w-full h-full object-cover rounded-lg shadow-md"
                 />
                 <img
-                  src={`http://62.72.57.47:8080/${event.images[2]}`}
+                  src={`${BACKEND_URL}/${event.images[2]}`}
                   alt="Workshop Image 2"
                   className="w-full h-full object-cover rounded-lg shadow-md"
                 />
@@ -120,7 +119,7 @@ const Event = () => {
             {/* Image with Nested Grid 2 */}
             <div className="flex flex-col items-center space-y-4">
               <img
-                src={`http://62.72.57.47:8080/${event.images[3]}`}
+                src={`${BACKEND_URL}/${event.images[3]}`}
                 alt="Workshop Image 3"
                 className="w-full h-auto max-w-md object-cover rounded-lg shadow-md"
               />
@@ -129,18 +128,18 @@ const Event = () => {
             {/* Image with Nested Grid 3 */}
             <div className="flex flex-col items-center space-y-4">
               <img
-                src={`http://62.72.57.47:8080/${event.images[4]}`}
+                src={`${BACKEND_URL}/${event.images[4]}`}
                 alt="Main Workshop"
                 className="w-full h-auto max-w-md object-cover rounded-lg shadow-md"
               />
               <div className="grid grid-cols-2 gap-2 w-full max-w-md">
                 <img
-                  src={`http://62.72.57.47:8080/${event.images[5]}`}
+                  src={`${BACKEND_URL}/${event.images[5]}`}
                   alt="Workshop Image 1"
                   className="w-full h-full object-cover rounded-lg shadow-md"
                 />
                 <img
-                  src={`http://62.72.57.47:8080/${event.images[6]}`}
+                  src={`${BACKEND_URL}/${event.images[6]}`}
                   alt="Workshop Image 2"
                   className="w-full h-full object-cover rounded-lg shadow-md"
                 />
