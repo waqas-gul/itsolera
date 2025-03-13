@@ -3,10 +3,12 @@ import mission from "../../assets/images/aboutUs/mission.svg";
 
 const MissionSection = () => {
   return (
-    <div className="flex flex-col md:flex-row items-center bg-white font-inter px-4 py-8 mx-20  md:px-8 md:py-12 gap-y-6">
+    <div className="flex flex-col md:flex-row items-center bg-white font-inter px-4 py-8 lg:mx-20 sm:mx-8  md:px-8 md:py-12 gap-y-6">
       {/* Text Section */}
-      <div className="flex-1 mb-6 md:mb-0 md:pr-8 text-center md:text-left">
-        <h2 className="text-2xl font-bold text-cDarkBlue mb-4">OUR MISSION:</h2>
+      <div className="flex-1 mb-6 mx-6 md:mb-0 md:pr-8 text-center md:text-left">
+        <h2 className="text-2xl font-bold text-cDarkBlue mb-4 text-left">
+          OUR MISSION:
+        </h2>
         <p className="text-base md:text-lg  text-left text-textGray leading-6">
           At <span className="font-semibold">ITSOLERA</span>, we strive to help
           companies leverage technology to grow and develop by providing them
