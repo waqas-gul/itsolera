@@ -94,24 +94,24 @@ const Event = () => {
 
         {/* Image Grid Section */}
         <div className="container mx-auto p-8 ">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
             {/* Image with Nested Grid 1 */}
-            <div className="flex flex-col items-center space-y-4">
+            <div className="flex  flex-col items-center space-y-7 ">
               <img
                 src={`${BACKEND_URL}/${event.images[0]}`}
                 alt="Main Workshop"
-                className="w-full h-auto max-w-md object-cover rounded-lg shadow-md"
+                className="w-[20rem]  h-auto max-w-md object-cover rounded-lg shadow-md "
               />
               <div className="grid grid-cols-2 gap-2 w-full max-w-md">
                 <img
                   src={`${BACKEND_URL}/${event.images[1]}`}
                   alt="Workshop Image 1"
-                  className="w-full h-full object-cover rounded-lg shadow-md"
+                  className="w-[10rem] h-[8rem] object-cover rounded-lg shadow-md"
                 />
                 <img
                   src={`${BACKEND_URL}/${event.images[2]}`}
                   alt="Workshop Image 2"
-                  className="w-full h-full object-cover rounded-lg shadow-md"
+                  className="w-[10rem] h-[8rem] object-cover rounded-lg shadow-md"
                 />
               </div>
             </div>
@@ -121,7 +121,7 @@ const Event = () => {
               <img
                 src={`${BACKEND_URL}/${event.images[3]}`}
                 alt="Workshop Image 3"
-                className="w-full h-auto max-w-md object-cover rounded-lg shadow-md"
+                className="w-full h-[24rem] max-w-md object-cover rounded-lg shadow-md"
               />
             </div>
 
@@ -130,18 +130,18 @@ const Event = () => {
               <img
                 src={`${BACKEND_URL}/${event.images[4]}`}
                 alt="Main Workshop"
-                className="w-full h-auto max-w-md object-cover rounded-lg shadow-md"
+                className="w-[20rem] h-auto max-w-md object-cover rounded-lg shadow-md"
               />
               <div className="grid grid-cols-2 gap-2 w-full max-w-md">
                 <img
                   src={`${BACKEND_URL}/${event.images[5]}`}
                   alt="Workshop Image 1"
-                  className="w-full h-full object-cover rounded-lg shadow-md"
+                  className="w-[10rem] h-[8rem] object-cover rounded-lg shadow-md"
                 />
                 <img
                   src={`${BACKEND_URL}/${event.images[6]}`}
                   alt="Workshop Image 2"
-                  className="w-full h-full object-cover rounded-lg shadow-md"
+                  className="w-[10rem] h-[8rem] object-cover rounded-lg shadow-md"
                 />
               </div>
             </div>

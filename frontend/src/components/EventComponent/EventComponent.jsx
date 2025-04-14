@@ -132,11 +132,12 @@ const EventComponent = () => {
                     transition={{ duration: 0.3 }}
                   >
                     {/* Image */}
-                    <div className="w-full md:w-1/3 h-40 md:h-auto">
+
+                    <div className="lg:w-[25rem] md:w-1/3  flex items-center justify-center">
                       <img
-                        src={`${BACKEND_URL}/${event.images[7]}`} // Use the first image
+                        src={`${BACKEND_URL}/${event.images[7]}`}
                         alt={event.title}
-                        className="w-full h-full object-cover"
+                        className="w-[100vw] lg:h-[40vh] object-cover"
                       />
                     </div>
 
