@@ -2,10 +2,6 @@ const multer = require("multer");
 const path = require("path");
 
 
-
-
-
-
 // Set up storage engine for Multer
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
