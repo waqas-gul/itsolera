@@ -10,7 +10,7 @@ A modern corporate website for ITSolera, showcasing software development service
 | Section | Preview |
 |---------|---------|
 | **Home page** | ![Home](/home.png) |
-| **team members** | ![Home](/home.png) |
+| **team members** | ![Home](/team.png) |
 | **About us page** | ![Services](/about.png) |
 | **Contcat us page** | ![Team](/contact.png) |
 
